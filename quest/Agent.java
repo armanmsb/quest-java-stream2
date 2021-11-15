@@ -1,3 +1,5 @@
+package quest;
+
 public class Agent {
 
     private String firstName;
@@ -22,5 +24,13 @@ public class Agent {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public static Agent createAgent(String s){
+
+        String firstname = s.split(" ") [0];
+        String lastname = s.split(" ") [1];
+
+        return new Agent(firstname, lastname);
     }
 }
