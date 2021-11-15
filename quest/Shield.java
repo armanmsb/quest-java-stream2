@@ -18,7 +18,8 @@ public class Shield {
         // TODO 1 : map names to agents list
         List<Agent> agents = names
                 .stream()
-                .map(name -> Agent.createAgent(name))
+                .map(name -> name.split(" "))
+                .map(a -> new Agent(a[0],a[1]))
                 .collect(Collectors.toList());
 
         /* Oder auch so:
